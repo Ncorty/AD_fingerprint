@@ -1,16 +1,24 @@
-import {Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  CreateDateColumn,
+} from 'typeorm';
 
 @Entity('scans')
-export class Scan{
-    @PrimaryGeneratedColumn()
-    id: string;
+export class Scan {
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    user:string;
+  @Column()
+  user: string;
 
-    @Column()
-    date:Date;
+  @Column({ default: false })
+  isAD: boolean;
 
-    @Column({default: false})
-    isAD: boolean;
+  @Column()
+  comment: string;
+
+  @CreateDateColumn()
+  createdAt: Date;
 }
