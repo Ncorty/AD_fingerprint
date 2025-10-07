@@ -1,4 +1,3 @@
-import { StringLiteral } from '@babel/types';
 import {Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
 
 @Entity('scans')
@@ -12,7 +11,6 @@ export class Scan{
     @Column()
     date:Date;
 
-    @Column()
+    @Column({default: false})
     isAD: boolean;
 }
-
