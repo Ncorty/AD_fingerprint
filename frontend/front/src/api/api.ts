@@ -1,19 +1,19 @@
 import axios from "axios";
 
-const URL = import.meta.env.URL || "http://localhost:6000";
+const URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 export interface Scan {
     id: number;
     user: string;
     isAD: boolean;
     comment: string;
-    created_at: Date;
+    createdAt: Date;
 }
 
 export interface User{
     id:number;
     login:string;
-    created_at:Date;
+    createdAt:Date;
 }
 
 export interface createScanDto{

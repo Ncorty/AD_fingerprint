@@ -1,0 +1,1 @@
+export const HistoryPage = () => (console.log("s"))

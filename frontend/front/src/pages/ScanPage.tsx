@@ -1,0 +1,1 @@
+export const ScanPage = () => (console.log("h"))

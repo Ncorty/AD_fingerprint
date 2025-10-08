@@ -1,4 +1,7 @@
 task.txt
+backend/postgres/data/*
+postgres-data/
+pgdata/
 
 # Dependencies
 node_modules/
@@ -58,11 +61,6 @@ coverage/
 
 # Docker
 docker-compose.override.yml
-
-# PostgreSQL data
-backend/postgres/data/
-postgres-data/
-pgdata/
 
 # Database files
 *.sqlite
