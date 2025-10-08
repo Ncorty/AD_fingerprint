@@ -1,82 +1,97 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 task.txt
 
-# dependencies
-/node_modules
-/.pnp
+# Dependencies
+node_modules/
+.pnp
 .pnp.js
 
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-# compiled output
-/dist
-/node_modules
-/build
+# Build outputs
+dist/
+build/
 
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
-pnpm-debug.log*
 yarn-debug.log*
-yarn-error.log*
+pnpm-debug.log*
 lerna-debug.log*
 
-# OS
+# OS files
 .DS_Store
-
-# Tests
-/coverage
-/.nyc_output
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
 
 # IDEs and editors
-/.idea
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
 .project
 .classpath
 .c9/
 *.launch
 .settings/
-*.sublime-workspace
 
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# dotenv environment variable files
+# Environment variables
 .env
+.env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env.local
+.env*.local
 
-# temp directory
-.temp
-.tmp
+# Testing
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Docker
+docker-compose.override.yml
+
+# PostgreSQL data
+backend/postgres/data/
+postgres-data/
+pgdata/
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+.temp/
+*.tmp
+*.temp
 
 # Runtime data
-pids
+pids/
 *.pid
 *.seed
 *.pid.lock
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
+# Diagnostic reports
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-/backend/postgres
+# Tanstack Router generated
+.routify/
+
+# Vite
+.vite/
+vite.config.ts.timestamp-*
+
+# Misc
+.cache/
