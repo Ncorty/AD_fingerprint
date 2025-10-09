@@ -29,7 +29,8 @@ export const api = {
         axios.post<Scan>(`${URL}/scans/create`, data),
     getAllScans: (user:string) =>
         axios.get<Scan[]>(`${URL}/scans/getAll`, {params:{user}}),
+    getScanById: (id:number,login:string) =>
+        axios.get<Scan>(`${URL}/scans/getById/${id}?login=${login}`),
     deleteScan: (id:number) =>
-        axios.delete(`${URL}/scans/delete/${id}`),
-
+        axios.delete(`${URL}/scans/delete/${id}`)
 }

@@ -1,7 +1,7 @@
 import { createRouter, createRoute, createRootRoute } from '@tanstack/react-router';
 import { Layout } from './components/layout';
 import { HomePage } from './pages/HomePage';
-import { HistoryPage } from './pages/HistoryPage';
+import HistoryPage from './pages/HistoryPage';
 import { ScanPage } from './pages/ScanPage';
 
 const rootRoute = createRootRoute({

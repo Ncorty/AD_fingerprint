@@ -25,7 +25,7 @@ export const HomePage = () => {
         }
     })
     const handleScan = async () => {
-        if (!login) {
+        if (!login || login == '') {
             alert("Please login");
             return
         }
