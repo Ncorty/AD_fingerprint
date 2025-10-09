@@ -27,6 +27,10 @@ export class ScanController {
   getAll(@Query() query: getScanDto) {
     return this.scanService.getAllScans(query.user);
   }
+  @Get('getById/:id')
+  getById(@Param('id') id: string, @Query('user') user: string) {
+    return this.scanService.getScanById(Number(id), user);
+  }
   @Delete('delete/:id')
   delete(@Param('id') id: string) {
     console.log(id);

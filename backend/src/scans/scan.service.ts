@@ -26,6 +26,14 @@ export class ScanService {
     // return await this.scanRepository.find({});
   }
 
+  async getScanById(id: number, user: string) {
+    const result = await this.scanRepository.findOne({
+      where: {
+        id:id,
+        user: user },
+    });
+    return result;
+  }
   async deleteScan(id: number) {
     const result = await this.scanRepository.delete(id);
     return result;
