@@ -49,15 +49,15 @@ export const HomePage = () => {
         }
     }
     return (
-        <div className="max-w-2xl mx-auto mt-8">
-            <Card className="shadow-lg">
+        <div className="flex items-center justify-center min-h-[calc(100vh-200px)]">
+            <Card style={{width: '100%', maxWidth: '42rem'/*, display: 'flex', justifyContent: 'center'*/}} className="shadow-lg  w-full max-w-7xl">
                 <CardHeader>
                     <CardTitle className="text-2xl">Scanning for availability GoLogin</CardTitle>
                     <CardDescription className="text-2xl">
                         Start scanning for availability
                     </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6">
+                <CardContent /*style={{display: 'flex', justifyContent: 'flex-center'}}*/ className="space-y-6">
                     <div className="space-y-2">
                         <Label htmlFor="username" className="text-base">
                             Login

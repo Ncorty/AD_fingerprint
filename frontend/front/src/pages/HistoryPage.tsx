@@ -87,38 +87,42 @@ const HistoryPage = () =>{
             )}
             <div className="border rounded-lg overflow-hidden shadow">
                 {filterSortScans && filterSortScans.length > 0 && (
-                <Table className="border rounded-lg">
+                <Table style={{border: '2px solid #e5e7eb', padding: '1rem 1rem'}} className="border rounded-lg">
                     <TableHeader>
                         <TableRow className="bg-muted/50">
-                            <TableHead className="font-bold">
+                            <TableHead style={{padding: '1.25rem 2.5rem'}} className="font-bold">
                                 ID
                             </TableHead>
-                            <TableHead className="font-bold" >
+                            <TableHead style={{padding: '1.25rem 2.5rem'}} className="font-bold" >
                                 User
                             </TableHead>
-                            <TableHead className="font-bold">
+                            <TableHead style={{padding: '1.25rem 2.5rem'}} className="font-bold" >
                                 Status
                             </TableHead>
-                            <TableHead className="font-bold">
+                            <TableHead style={{padding: '1.25rem 2.5rem'}} className="font-bold" >
                                 Date
                             </TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
                         {filterSortScans.map((scan) => (
-                            <TableRow key={scan.id}
-                            onClick={() => navigate({to: `/scan/$id`, params:{id: scan.id.toString()}})}
+                            <TableRow  key={scan.id}
+                            onClick={() => navigate({to: `/scan/$id`, params:{id: scan.id.toString()}, search:{user: scan.user}})}
                             className="cursor-pointer hover:bg-muted/50 transition-colors">
-                                <TableCell className="border">
+                                <TableCell style={{border: '1px solid #e5e7eb', padding: '1rem 2.5rem'}}
+                                    className="border">
                                     {scan.id}
                                 </TableCell>
-                                <TableCell className="border font-medium">
+                                <TableCell style={{border: '1px solid #e5e7eb', padding: '1rem 2.5rem'}}
+                                    className="border font-medium">
                                     {scan.user}
                                 </TableCell>
-                                <TableCell className="border font-medium">
+                                <TableCell style={{border: '1px solid #e5e7eb', padding: '1rem 2.5rem'}}
+                                    className="border font-medium">
                                     {scan.isAD ? "AD" : "no_AD"}
                                 </TableCell>
-                                <TableCell className="border text-muted-foreground">
+                                <TableCell style={{border: '1px solid #e5e7eb', padding: '1rem 2.5rem'}}
+                                           className="border text-muted-foreground">
                                     {new Date(scan.createdAt).toLocaleString('ru-RU',{
                                         year: 'numeric',
                                         month: 'short',
