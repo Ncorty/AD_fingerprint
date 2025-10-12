@@ -61,10 +61,11 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /*display: flex;*/
+  /*place-items: center;*/
   min-width: 320px;
   min-height: 100vh;
+  /*justify-content: center;*/
 }
 
 h1 {
@@ -183,4 +184,9 @@ button:focus-visible {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
 }

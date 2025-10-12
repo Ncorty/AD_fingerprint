@@ -31,7 +31,7 @@ export const HomePage = () => {
         }
         setScan(true);
         try {
-            const result = detectGoLogin()
+            const result = await detectGoLogin()
             await new Promise(resolve => setTimeout(resolve, 1000));
             await createScan.mutateAsync({
                 user: login,
@@ -50,14 +50,14 @@ export const HomePage = () => {
     }
     return (
         <div className="flex items-center justify-center min-h-[calc(100vh-200px)]">
-            <Card style={{width: '100%', maxWidth: '42rem'/*, display: 'flex', justifyContent: 'center'*/}} className="shadow-lg  w-full max-w-7xl">
+            <Card style={{width: '100%', maxWidth: '42rem'}} className="shadow-lg  w-full max-w-7xl">
                 <CardHeader>
                     <CardTitle className="text-2xl">Scanning for availability GoLogin</CardTitle>
                     <CardDescription className="text-2xl">
                         Start scanning for availability
                     </CardDescription>
                 </CardHeader>
-                <CardContent /*style={{display: 'flex', justifyContent: 'flex-center'}}*/ className="space-y-6">
+                <CardContent className="space-y-6">
                     <div className="space-y-2">
                         <Label htmlFor="username" className="text-base">
                             Login

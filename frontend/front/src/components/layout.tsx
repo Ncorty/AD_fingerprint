@@ -3,14 +3,14 @@ import { Button } from '@/components/ui/button';
 
 export const Layout = () => {
     return (
-        <div className="min-h-screen bg-background">
-            <nav className="border-b">
-                <div className="container mx-auto px-4 py-4 flex gap-4">
+        <div className="min-h-screen bg-background w-full">
+            <nav className="border-b w-full">
+                <div className="px-4 py-4 flex gap-4">
                     <Link to="/">
-                        <Button variant="ghost">Главная</Button>
+                        <Button /*style={{display: 'flex', justifyContent: 'flex-start'}}*/ variant="ghost">Главная</Button>
                     </Link>
                     <Link to="/history">
-                        <Button variant="ghost">История сканов</Button>
+                        <Button /*style={{display: 'flex', justifyContent: 'flex-start'}}*/ variant="ghost">История сканов</Button>
                     </Link>
                 </div>
             </nav>
