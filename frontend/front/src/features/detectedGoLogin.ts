@@ -1,8 +1,3 @@
-// export const detectGoLogin = () => {
-//
-//     return {isAD:false, comment:"test"}
-// }
-
 type res = {
     isAD: number;
     comment: string [];
@@ -55,7 +50,7 @@ function checkWebGL(){
 
 function checkAgent(){
     const res: res = {isAD:0, comment: []};
-    const ua = navigator.userAgent;
+    // const ua = navigator.userAgent;
 
     if (navigator.language && navigator.languages[0] !== navigator.language ){
         res.isAD += 1;
