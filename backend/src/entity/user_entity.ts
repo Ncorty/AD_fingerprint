@@ -8,10 +8,11 @@ import {
 
 @Entity('users')
 export class User {
-  @ApiProperty({ example: 'test', description: 'User login' })
+  @ApiProperty({ example: 1, description: 'User ID' })
   @PrimaryGeneratedColumn()
   id: number;
-
+  
+  @ApiProperty({ example: 'test', description: 'User login' })
   @Column()
   login: string;
 

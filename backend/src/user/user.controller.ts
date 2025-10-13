@@ -4,11 +4,6 @@ import { UserService } from './user.service';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { User } from 'src/entity/user_entity';
 
-export type filters = {
-  id: string;
-  date: string;
-};
-
 @Controller('user')
 export class UserController {
   constructor(private userService: UserService) {}

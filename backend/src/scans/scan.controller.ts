@@ -27,10 +27,16 @@ export class ScanController {
   getAll(@Query() query: getScanDto) {
     return this.scanService.getAllScans(query.user);
   }
+  @ApiOperation({ summary: 'Get scan by id' })
+  @ApiResponse({ status: 200, type: Scan, description: 'Scan by id' })
+  @Get('getById/:id')
+  getById(@Param('id') id: string, @Query('user') user: string) {
+    return this.scanService.getScanById(Number(id), user);
+  }
+  @ApiOperation({ summary: 'Delete scan by id' })
+  @ApiResponse({ status: 200, type: Scan, description: 'Deleted scan' })
   @Delete('delete/:id')
   delete(@Param('id') id: string) {
-    console.log(id);
-    console.log(Number(id));
     return this.scanService.deleteScan(Number(id));
   }
 }

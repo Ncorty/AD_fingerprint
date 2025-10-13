@@ -3,8 +3,15 @@ import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function start() {
-  const PORT = process.env.PORT || 6000;
+  const PORT = process.env.PORT || 3000;
   const app = await NestFactory.create(AppModule);
+
+  app.enableCors({
+    origin: '*', // Разрешаем все источники (для разработки)
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+  });
 
   const config = new DocumentBuilder()
     .setTitle('AD_fingerprint')
