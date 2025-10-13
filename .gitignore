@@ -2,6 +2,10 @@ task.txt
 backend/postgres/data/*
 postgres-data/
 pgdata/
+frontend/front/dist
+frontend/front/node_modules
+backend/dist
+backend/node_modules
 
 # Dependencies
 node_modules/

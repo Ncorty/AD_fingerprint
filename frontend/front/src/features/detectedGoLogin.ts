@@ -1,4 +1,4 @@
-import type {Brand, UAHighEntropyValues, NavigatorUAData} from './int.ts';
+
 import { UserAgentDataTypeGuard } from './int.ts';
 
 type res = {
