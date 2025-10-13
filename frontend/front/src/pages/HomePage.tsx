@@ -52,9 +52,11 @@ export const HomePage = () => {
         <div className="flex items-center justify-center min-h-[calc(100vh-200px)]">
             <Card style={{width: '100%', maxWidth: '42rem'}} className="shadow-lg  w-full max-w-7xl">
                 <CardHeader>
-                    <CardTitle className="text-2xl">Scanning for availability GoLogin</CardTitle>
+                    <CardTitle className="text-2xl">
+                        Scanning for availability GoLogin
+                    </CardTitle>
                     <CardDescription className="text-2xl">
-                        Start scanning for availability
+                        Start scanning
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -77,6 +79,7 @@ export const HomePage = () => {
                     disabled={scan || !login}
                     size="lg"
                     className="text-base w-full py-6"
+                    // variant="outline-primary"
                     >
                         {scan ? (
                             <>

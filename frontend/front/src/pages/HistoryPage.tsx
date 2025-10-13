@@ -53,13 +53,13 @@ const HistoryPage = () =>{
                 </div>
                 <div className="flex gap-2">
                     <Button
-                        variant={sortBy === 'date' ? "default": "outline"}
+                        variant="default"
                         onClick={()=>setSortBy('date')}
                         >
                     By date
                     </Button>
                     <Button
-                        variant={sortBy === 'status' ? 'default': "outline"}
+                        variant="default"
                         onClick={()=>setSortBy('status')}
                         >
                     By status
@@ -87,19 +87,19 @@ const HistoryPage = () =>{
             )}
             <div className="border rounded-lg overflow-hidden shadow">
                 {filterSortScans && filterSortScans.length > 0 && (
-                <Table style={{border: '2px solid #e5e7eb', padding: '1rem 1rem'}} className="border rounded-lg">
+                <Table className="border-4 rounded-lg">
                     <TableHeader>
                         <TableRow className="bg-muted/50">
-                            <TableHead style={{padding: '1.25rem 2.5rem'}} className="font-bold">
+                            <TableHead className="font-bold">
                                 ID
                             </TableHead>
-                            <TableHead style={{padding: '1.25rem 2.5rem'}} className="font-bold" >
+                            <TableHead className="font-bold" >
                                 User
                             </TableHead>
-                            <TableHead style={{padding: '1.25rem 2.5rem'}} className="font-bold" >
+                            <TableHead className="font-bold" >
                                 Status
                             </TableHead>
-                            <TableHead style={{padding: '1.25rem 2.5rem'}} className="font-bold" >
+                            <TableHead className="font-bold" >
                                 Date
                             </TableHead>
                         </TableRow>
@@ -119,7 +119,7 @@ const HistoryPage = () =>{
                                 </TableCell>
                                 <TableCell style={{border: '1px solid #e5e7eb', padding: '1rem 2.5rem'}}
                                     className="border font-medium">
-                                    {scan.isAD ? "AD" : "no_AD"}
+                                    {scan.isAD ? "🚫 AD" : "✅ no_AD"}
                                 </TableCell>
                                 <TableCell style={{border: '1px solid #e5e7eb', padding: '1rem 2.5rem'}}
                                            className="border text-muted-foreground">

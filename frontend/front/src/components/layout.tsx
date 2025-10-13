@@ -7,10 +7,10 @@ export const Layout = () => {
             <nav className="border-b w-full">
                 <div className="px-4 py-4 flex gap-4">
                     <Link to="/">
-                        <Button /*style={{display: 'flex', justifyContent: 'flex-start'}}*/ variant="ghost">Главная</Button>
+                        <Button variant="default" >Главная</Button>
                     </Link>
                     <Link to="/history">
-                        <Button /*style={{display: 'flex', justifyContent: 'flex-start'}}*/ variant="ghost">История сканов</Button>
+                        <Button variant="default">История сканов</Button>
                     </Link>
                 </div>
             </nav>

@@ -53,34 +53,37 @@ export const ScanPage = () =>{
     return (
         <div className="mx-auto">
             <div className="flex flex-col justify-center items-center">
-                <h1 className="text-xl">
-                    Scan №{scan.id} - {scan.isAD ? 'AD detected' : 'AD no detected'}
+                <h1 className="text-2xl">
+                    Scan №{scan.id}
                 </h1>
+                <h2 className="text-3xl font-semibold">
+                    {scan.isAD ? 'AD detected' : 'AD no detected'}
+                </h2>
             </div>
             <div className="flex flex-col gap-4">
-                <Card className="shadow">
-                    <h2 className="text-lg font-semibold text-xl">
+                <Card className="shadow p-6">
+                    <h2 className="text-2xl font-semibold">
                         INFO about User
                     </h2>
-                    <div>
-                        <span className="text-sm text-white-600">Login: </span>
-                        <span className="text-sm text-white-600">{scan.user}</span>
+                    <div className="text-center">
+                        <span className="text-lg text-white-600">Login: </span>
+                        <span className="text-lg text-white-600">{scan.user}</span>
                     </div>
                 </Card>
 
-                <Card className="shadow">
-                    <h2 className="text-lg">
+                <Card className="shadow p-6">
+                    <h2 className="text-2xl font-semibold">
                         Details scan:
                     </h2>
-                    <div className="whitespace-pre-wrap font-mono text-sm leading-relaxed">
-                        {scan.comment || "no info("}
+                    <div className="whitespace-pre-wrap font-mono text-sm leading-relaxed text-center">
+                        {scan.comment || "no info❓"}
                     </div>
                 </Card>
                 <Card className="p-6">
-                    <h2 className="text-lg font-semibold mb-4">
-                        Дата сканирования
+                    <h2 className="text-2xl font-semibold mb-4">
+                        Date:
                     </h2>
-                    <div>
+                    <div className="text-center">
                         {new Date(scan.createdAt).toLocaleString('ru-RU', {
                             year: 'numeric',
                             month: 'long',
@@ -104,7 +107,7 @@ export const ScanPage = () =>{
                             <Button variant="destructive" onClick={handleDeleteScan} disabled={deleteMutaion.isPending}>
                                 {deleteMutaion.isPending ? 'Deleted...' : 'I confirim'}
                             </Button>
-                            <Button variant="outline" onClick={()=>setDeleteScan(false)}>
+                            <Button variant="destructive" onClick={()=>setDeleteScan(false)}>
                                 Cancel
                             </Button>
                         </div>
