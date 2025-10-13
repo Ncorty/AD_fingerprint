@@ -89,7 +89,7 @@ export const HomePage = () => {
                             ):
                             (<>
                                 <span className="mr-2"></span>
-                                Start scan
+                                Start scan 🔍
                             </>
                             )}
                     </Button>

@@ -5,7 +5,12 @@ export const Layout = () => {
     return (
         <div className="min-h-screen bg-background w-full">
             <nav className="border-b w-full">
-                <div className="px-4 py-4 flex gap-4">
+                <div className="flex items-center gap-4">
+                    <img
+                        src="/pepe.png"
+                        alt="Logo"
+                        className="h-20 w-20"
+                    />
                     <Link to="/">
                         <Button variant="default" >Главная</Button>
                     </Link>
@@ -13,6 +18,7 @@ export const Layout = () => {
                         <Button variant="default">История сканов</Button>
                     </Link>
                 </div>
+
             </nav>
             <main className="container mx-auto px-4 py-10">
                 <Outlet />
