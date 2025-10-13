@@ -9,7 +9,6 @@
 - typeorm
 - pg
 - swagger(swagger-UI)
-- .env(см. .env.example)
 
 ### Frontend Vite + React
 - vite
@@ -20,9 +19,9 @@
 
 
 ## Описание запуска приложения
-#### При наличии docker
+#### Docker
 - в корне проекта написать ``` docker-compose up --build ```
-#### При отсутсвии docker
+#### Без docker
 - Проверить что все зависимости есть
 - Создать .env(см. .env.example) в папках /backend и /frontend/front
 - Перейти в папку /backend и ввести в терминал ``` npm run start ```
